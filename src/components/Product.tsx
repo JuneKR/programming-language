@@ -30,7 +30,7 @@ const ProductComponent: React.FC<ProductProps> = ({ products }) => {
           <img src={product.thumbnail} alt={product.title} className="w-full h-40 object-cover" />
           <div className="flex-grow">
             {/* <h3 className="mt-4 font-semibold text-lg">{product.title}</h3> */}
-            <p className="mt-4 text-gray-400">{product.description}</p>
+            <p className="mt-4 text-gray-700">{product.description}</p>
             <div className="flex items-center">
               <span className="mt-2 text-orange-500">{renderRatingStars(product.rating)}</span>
             </div>
