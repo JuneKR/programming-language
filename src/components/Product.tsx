@@ -32,7 +32,7 @@ const ProductComponent: React.FC<ProductProps> = ({ products }) => {
             {/* <h3 className="mt-4 font-semibold text-lg">{product.title}</h3> */}
             <p className="mt-4 text-gray-400">{product.description}</p>
             <div className="flex items-center">
-              <span className="text-orange-500">{renderRatingStars(product.rating)}</span>
+              <span className="mt-2 text-orange-500">{renderRatingStars(product.rating)}</span>
             </div>
             {product.discountPercentage > 0 ? (
               <div className="text-red-600">
@@ -43,7 +43,7 @@ const ProductComponent: React.FC<ProductProps> = ({ products }) => {
               <p className="text-gray-400">${product.price.toFixed(2)}</p>
             )}
           </div>
-          <div className="mt-4 mb-4 text-gray-400 hover:text-pink-500 transition-colors">
+          <div className="mt-4 mb-4 text-gray-200 hover:text-pink-500 transition-colors">
             <FaHeart size={24} />
           </div>
         </div>
