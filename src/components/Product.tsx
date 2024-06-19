@@ -32,9 +32,14 @@ const ProductComponent: React.FC<ProductProps> = ({ products }) => {
           <div className="flex items-center">
             <span className="text-orange-500">{renderRatingStars(product.rating)}</span>
           </div>
-          {
-            <p className="text-gray-500">${product.price.toFixed(2)}</p>
-          }
+          {product.discountPercentage > 0 ? (
+            <div className="text-red-600">
+              <span className="text-lg font-bold">${(product.price - (product.price * product.discountPercentage / 100)).toFixed(2)}</span>
+              <span className="line-through ml-2 text-gray-400">${product.price.toFixed(2)}</span>
+            </div>
+          ) : (
+            <p className="text-gray-400">${product.price.toFixed(2)}</p>
+          )}
         </div>
       ))}
     </div>
